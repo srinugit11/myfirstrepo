@@ -37,6 +37,7 @@ pipeline {
             steps {
                 sh "echo 'production stage'"
                 sh "/home/srinu/srinu/prod.sh"
+                emailext body: 'we are running example build', subject: 'jenkins pipeline build', to: 'srinu.muppana3142@gmail.com'
             }
             
         }

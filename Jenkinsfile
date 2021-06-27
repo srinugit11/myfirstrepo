@@ -2,6 +2,13 @@ pipeline {
     agent any
     
     stages {
+        
+        stage('checkout') {
+            steps {
+                git branch: 'main', poll: false, url: 'https://github.com/srinugit11/myfirstrepo.git'
+            }
+        
+        }
         stage("dev") {
             
             steps {
